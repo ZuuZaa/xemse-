@@ -1,26 +1,20 @@
-var meyveler = [
+var suallar = [
 
     {
         sual: "Bu meyvənin elmi adı iki latın sözünün birləşməsindən əmələ gəlmişdir. Punica - tünd qırmızı və granatus - dənə deməkdir.",
-        cavab: [{ name: "nar", value: true },
-        { name: "üzüm", value: false },
-        { name: "qarağat", value: false },
-        { name: "şaftalı", value: false }]
+        cavab: ["nar", "üzüm", "qarağat", "şaftalı"],
+        dogrucavab: "nar"
     },
     {
         sual: "Azərbaycanda bu meyvənin əti məcməilərə yayılaraq günəşdə qurudulur və ondan”lavaş” hazırlanılır.",
-        cavab: [{ name: "üzüm", value: false },
-        { name: "armud", value: false },
-        { name: "nar", value: false },
-        { name: "alça", value: true }]
+        cavab: ["üzüm", "armud", "nar", "alça"],
+        dogrucavab: "alça"
     },
     {
         sual: "Avropalılar orta əsrlərdə Çin dövlətinin məmurlarını bu bitkinin adı ilə adlandırırdılar.",
-        cavab: [{ name: "Mandarin", value: true },
-        { name: "Banan", value: false },
-        { name: "Alma", value: false },
-        { name: "Kivi", value: false }]
-    },
+        cavab: ["Mandarin", "Banan", "Alma", "Kivi"],
+        dogrucavab: "Mandarin"
+    }] /*,
     {
         sual: "Bu meyvənin hərfi mənada tərcüməsi - Fars gavalısı deməkdir",
         cavab: [{ name: "Ərik", value: false },
@@ -34,8 +28,7 @@ var meyveler = [
         { name: "Heyva", value: false },
         { name: "Armud", value: false },
         { name: "Göyəm", value: false }]
-    }]
-var heyvanlar = [
+    },
     {
         sual: " Avstraliyanın cənub sahillərində yerləşən ada",
         cavab: [{ name: "Ağ ayı", value: false },
@@ -70,9 +63,7 @@ var heyvanlar = [
         { name: "Zəhərli ilan", value: false },
         { name: "Qara Tülkü", value: true },
         { name: "Pələng", value: false }]
-    }]
-
-var maraqli = [
+    },
     {
         sual: " Saat əqrəbi istiqamətində hərəkət edən yeganə planet",
         cavab: [{ name: "Mars", value: false },
@@ -107,47 +98,137 @@ var maraqli = [
         { name: "Dəvə", value: false },
         { name: "Dəvəquşu", value: true },
         { name: "Pələng", value: false }]
+    },
+    {
+        sual: "Bu amerikalı yazıçının əsl adı Con Qrafitedir",
+        cavab: [{ name: "Adam Boston", value: false },
+        { name: "Adrian Polo", value: false },
+        { name: "Jon Smit", value: false },
+        { name: "Cek London", value: true }]
+    },
+    {
+        sual: "2014-cü ilin qış olimpiya oyunları bu şəhərdə keçirildi",
+        cavab: [{ name: "Soçi", value: true },
+        { name: "Bakı", value: false },
+        { name: "Ankara", value: false },
+        { name: "Tokyo", value: false }]
+    },
+    {
+        sual: "ABŞ-n bu şəhərini - Böyük alma adlandırırlar",
+        cavab: [{ name: "Nyu Jersi", value: false },
+        { name: "Vaşinqton", value: false },
+        { name: "Nyu York", value: true },
+        { name: "Boston", value: false }]
+    },
+    {
+        sual: "XVII əsr italyan səyyahı Pyetro Dello Valle bu şəhəri - Azərbaycan Venesiyası adlandırmışsdır",
+        cavab: [{ name: "Ərdəbil", value: true },
+        { name: "Gəncə", value: false },
+        { name: "Təbriz", value: false },
+        { name: "Bakı", value: false }]
     }]
-    . Paris
-    . Cek London
-     Soçi
+
+*/
+
+
+$.ajax({
+    url: "https://api.giphy.com/v1/gifs/search",
+    data: {
+        q: "happy",
+        api_key: "c4UCMdKemf33qzUJMnURnI50YjHBmCRT"
+    }
+}).done(function (happy) {
+    console.log(happy)
+})
+
+$.ajax({
+    url: "https://api.giphy.com/v1/gifs/search",
+    data: {
+        q: "sad",
+        api_key: "c4UCMdKemf33qzUJMnURnI50YjHBmCRT"
+    }
+}).done(function (sad) {
+    console.log(sad)
+})
+
+var second = 30
+
+var game = {
+    question: suallar,
+    times: second,
+    correct: 0,
+    incoorect: 0,
+    questionnumber: 0,
+
+    timer: function () {
+        $(".time").empty()
+        game.times--
+        $(".time").append($("<h2>" + game.times + "</h2>"))
+        if (game.times === 0) {
+            clearInterval(interval)
+            alert("Vaxt bitdi")
+            $(".win-loose").append($("<h2>" + "VAXT BITDI :(" + "</h2>"))
+            console.log (game.question[instance].dogrucavab)
+            $(".win-loose").append("<h2>" + "Doğru cavab:  " + game.question[instance].dogrucavab + "</h2>")
+            if (instance === game.question.length - 1) {
+                   alert ("suallar bitdi")
+                setTimeout(function () {
+
+                    clearInterval(interval)
+                    $(".win-loose").append("<h2>" + "Oyun bitdi! Nəticələrin:" + "</h2>");
+                    $(".time").append($("<h2>" + game.times + "</h2>"))
+
+                     alert("neticeler")
+                    $(".btn-holder").append("<h2>Doğrular: " + game.correct + "</h2>");
+                    $(".btn-holder").append("<h2>Yanlışlar: " + game.incorrect + "</h2>");
+                    $(".btn-holder").append("<h2>Cavabsızlar: " + (game.questions.length - (game.incorrect + game.correct)) + "</h2>");
+                    $(".btn-holder").append("<br><button id='new-button'>yenidən ?</button>");
+                }, 5000)
+            }
+            else {
+                setTimeout(game.yenisual, 5000)
+            }
+        }
+    },
     
-       Ərdəbil
 
-    var seherler = [
+    yenisual: function () {
+        for ( var j=0; j < suallar.length; j++ ) {
+        instance = j
+        console.log (instance)
+        game.times = second
+        $(".time").append($("<h2>" + game.times + "</h2>"))
+        setInterval(game.timer, 300);
+        console.log (game.question[j].sual)
+        var sual = ($("<div>"))
+        sual.addClass("sual")
+        sual.html("<h2>" + game.question[j].sual + "</h2>");
+        $(".win-loose").append(sual)
 
-        {
-            sual: "O, hökmdar Priamın oğlu və Toya müharibəsinin səbəbkarıdır",
-            cavab: [{ name: "Paris", value: true },
-            { name: "London", value: false },
-            { name: "Oslo", value: false },
-            { name: "Praqa", value: false }]
-        },
-        {
-            sual: "Bu amerikalı yazıçının əsl adı Con Qrafitedir",
-            cavab: [{ name: "Adam Boston", value: false },
-            { name: "Adrian Polo", value: false },
-            { name: "Jon Smit", value: false },
-            { name: "Cek London", value: true }]
-        },
-        {
-            sual: "2014-cü ilin qış olimpiya oyunları bu şəhərdə keçirildi",
-            cavab: [{ name: "Soçi", value: true },
-            { name: "Bakı", value: false },
-            { name: "Ankara", value: false },
-            { name: "Tokyo", value: false }]
-        },
-        {
-            sual: "ABŞ-n bu şəhərini - Böyük alma adlandırırlar",
-            cavab: [{ name: "Nyu Jersi", value: false },
-            { name: "Vaşinqton", value: false },
-            { name: "Nyu York", value: true },
-            { name: "Boston", value: false }]
-        },
-        {
-            sual: "XVII əsr italyan səyyahı Pyetro Dello Valle bu şəhəri - Azərbaycan Venesiyası adlandırmışsdır",
-            cavab: [{ name: "Ərdəbil", value: true },
-            { name: "Gəncə", value: false },
-            { name: "Təbriz", value: false },
-            { name: "Bakı", value: false }]
-        }]
+        for (var i = 0; i < game.question[j].cavab.length; i++) {
+            var answer = $("<button>")
+            answer.addClass("btn-light")
+            answer.addClass("my-btn")
+            console.log(game.question[j].cavab[i])
+            sual.html("<h2>" + game.question[j].cavab[i] + "</h2>")
+            $(".btn-holder").append(sual)
+        }
+    }
+},
+
+   check: function(e) {
+        console.log(e.html)
+        if (e.html === question[instance].dogrucavab) {
+            $(".win-loose").append($("<h2>" + "YEAP!" + "</h2>"))
+            alert("yeap")
+            game.correct ++
+        } else {
+            $(".win-loose").append($("<h2>" + "OOPS!" + "</h2>"))
+            alert("oops")
+            game. incorrect ++
+        }
+    }
+} 
+
+interval = setInterval(game.timer, 300)
+game.yenisual()

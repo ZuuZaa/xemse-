@@ -19,11 +19,34 @@ a:hover {
     text-decoration:  none;
     color: azure;
 }
-button {
-    margin-top: 15px;
-    color: aliceblue;
-    background-color: rgb(138, 43, 226);
+.timer {
+    text-align: center;
+    padding-left: 40%;
+    padding-right: 30%;
+}
+h2 {
+    color: rgb(181, 106, 216);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.time {
+    float: left;
+}
+h2 {
+    padding: 1em 1em;
+}
+.sual {
+    padding-right: 30%;
 }
 .my-btn {
-    
+    margin-top: 25px;
+    margin-left:3%;
+    padding: 5px 20px;
+    width: 20%;
+    color: aliceblue;
+    background-color: rgb(150, 86, 209);
+    opacity: 0.8;
+    font-family:  'Gloria Hallelujah', cursive;
+    font-size: 1.5em;
+    border:2px solid rgb(205, 209, 212);
+    border-radius:10px;
 }
