@@ -14,121 +14,87 @@ var suallar = [
         sual: "Avropalılar orta əsrlərdə Çin dövlətinin məmurlarını bu bitkinin adı ilə adlandırırdılar.",
         cavab: ["Mandarin", "Banan", "Alma", "Kivi"],
         dogrucavab: "Mandarin"
-    }] /*,
+    },
     {
         sual: "Bu meyvənin hərfi mənada tərcüməsi - Fars gavalısı deməkdir",
-        cavab: [{ name: "Ərik", value: false },
-        { name: "Albalı", value: false },
-        { name: "Şaftalı", value: true },
-        { name: "Moruq", value: false }]
+        cavab: ["Ərik", "Albalı", "Şaftalı", "Moruq",] ,
+        dogrucavab: "Şaftalı"
     },
     {
         sual: "1801 - ci ildə Portuqaliya və İspaniya arasında olmuş müharibə",
-        cavab: [{ name: "Portağal", value: true },
-        { name: "Heyva", value: false },
-        { name: "Armud", value: false },
-        { name: "Göyəm", value: false }]
+        cavab: ["Portağal","Heyva","Armud", "Göyəm"],
+        dogrucavab: "Portağal"
     },
     {
         sual: " Avstraliyanın cənub sahillərində yerləşən ada",
-        cavab: [{ name: "Ağ ayı", value: false },
-        { name: "İlan", value: false },
-        { name: "Kenquru", value: true },
-        { name: "Maral", value: false }]
+        cavab: ["Ağ ayı","İlan","Kenquru", "Maral"],
+        dogrucavab: "Kenquru"
     },
     {
         sual: "Bu qitənin adının mənası - böyük ayı bürcünün əksində deməkdir.",
-        cavab: [{ name: "Avropa", value: false },
-        { name: "Amerika", value: false },
-        { name: "Antarktida", value: true },
-        { name: "Asiya", value: false }]
+        cavab: ["Avropa", "Amerika","Antarktida","Asiya"],
+        dogrucavab: "Antarktida"
     },
     {
         sual: "Timsahlı çay - mənasını verən Mali dövlətinin paytaxtı bu şəhərdir",
-        cavab: [{ name: "Bali", value: false },
-        { name: "Birma", value: false },
-        { name: "Bamako", value: true },
-        { name: "Butan", value: false }]
+        cavab: ["Bali","Birma","Bamako","Butan"],
+        dogrucavab: "Bamako"
     },
     {
         sual: "İsveçrənin paytaxt şəhəri Bern alman dilindən tərcümədə bu heyvanı bildirir ",
-        cavab: [{ name: "kərtənkələ", value: false },
-        { name: "ayı", value: true },
-        { name: "arı", value: false },
-        { name: "kirpi", value: false }]
+        cavab: ["kərtənkələ","ayı", "arı", "kirpi"],
+        dogrucavab: "ayı"
     },
     {
         sual: "Lui Stoumenin 1962-ci ildə Adolf Hitlerin həyatı haqqında çəkdiyi və Oskara layiq görülmüş bu film belə adlanır",
-        cavab: [{ name: "Yalnız Canavar", value: false },
-        { name: "Zəhərli ilan", value: false },
-        { name: "Qara Tülkü", value: true },
-        { name: "Pələng", value: false }]
+        cavab: ["Yalnız Canavar","Zəhərli ilan", "Qara Tülkü","Pələng"],
+        dogrucavab: "Qara Tülkü"
     },
     {
         sual: " Saat əqrəbi istiqamətində hərəkət edən yeganə planet",
-        cavab: [{ name: "Mars", value: false },
-        { name: "Yupitern", value: false },
-        { name: "Venera", value: true },
-        { name: "Saturn", value: false }]
+        cavab: ["Mars",  "Yupitern", "Venera", "Saturn"],
+        dogrucavab: "Venera"
     },
     {
         sual: "İlk gözəllik müsaqibəsi bu Avropa ölkəsində keçirilib",
-        cavab: [{ name: "Fransa", value: false },
-        { name: "Alamaniya", value: false },
-        { name: "Belçika", value: true },
-        { name: "İtaliiya", value: false }]
+        cavab: ["Fransa", "Alamaniya","Belçika", "İtaliiya"],
+        dogrucavab: "Belçika"
     },
     {
         sual: "Kürün Xəzərə tökülən qolu belə adlanır",
-        cavab: [{ name: "Balıqlı", value: false },
-        { name: "Tökmə", value: false },
-        { name: "Aquşa", value: true },
-        { name: "Qovuşan", value: false }]
+        cavab: ["Balıqlı","Tökmə","Aquşa","Qovuşan"],
+        dogrucavab: "Aquşa"
     },
     {
         sual: "Bombalar və güllələr haqqında elm belə adlanır",
-        cavab: [{ name: "Talistika", value: false },
-        { name: "Balistika", value: true },
-        { name: "Bombastika", value: false },
-        { name: "Kinomaniya", value: false }]
+        cavab: ["Talistika", "Balistika", "Bombastika", "Kinomaniya"],
+        dogrucavab: "Balistika"
     },
     {
         sual: "Bu canlının elmi adı struthio-camelusdur",
-        cavab: [{ name: "Çaqqal", value: false },
-        { name: "Dəvə", value: false },
-        { name: "Dəvəquşu", value: true },
-        { name: "Pələng", value: false }]
+        cavab: ["Çaqqal","Dəvə","Dəvəquşu","Pələng"],
+        dogrucavab: "Dəvəquşu"
     },
     {
         sual: "Bu amerikalı yazıçının əsl adı Con Qrafitedir",
-        cavab: [{ name: "Adam Boston", value: false },
-        { name: "Adrian Polo", value: false },
-        { name: "Jon Smit", value: false },
-        { name: "Cek London", value: true }]
+        cavab: ["Adam Boston","Adrian Polo", "Jon Smit", "Cek London" ],
+        dogrucavab: "Cek London" 
     },
     {
         sual: "2014-cü ilin qış olimpiya oyunları bu şəhərdə keçirildi",
-        cavab: [{ name: "Soçi", value: true },
-        { name: "Bakı", value: false },
-        { name: "Ankara", value: false },
-        { name: "Tokyo", value: false }]
+        cavab: ["Soçi", "Bakı","Ankara","Tokyo"],
+        dogrucavab: "Soçi"
     },
     {
         sual: "ABŞ-n bu şəhərini - Böyük alma adlandırırlar",
-        cavab: [{ name: "Nyu Jersi", value: false },
-        { name: "Vaşinqton", value: false },
-        { name: "Nyu York", value: true },
-        { name: "Boston", value: false }]
+        cavab: [ "Nyu Jersi",  "Vaşinqton", "Nyu York", "Boston"],
+        dogrucavab: "Nyu York"
     },
     {
         sual: "XVII əsr italyan səyyahı Pyetro Dello Valle bu şəhəri - Azərbaycan Venesiyası adlandırmışsdır",
-        cavab: [{ name: "Ərdəbil", value: true },
-        { name: "Gəncə", value: false },
-        { name: "Təbriz", value: false },
-        { name: "Bakı", value: false }]
+        cavab: ["Ərdəbil", "Gəncə", "Təbriz", "Bakı"],
+        dogrucavab: "Ərdəbil" 
     }]
-
-*/
 
 
 $.ajax({
@@ -139,6 +105,7 @@ $.ajax({
     }
 }).done(function (happy) {
     console.log(happy)
+    happy_img = happy.data[5].images.fixed_height.url
 })
 
 $.ajax({
@@ -148,87 +115,118 @@ $.ajax({
         api_key: "c4UCMdKemf33qzUJMnURnI50YjHBmCRT"
     }
 }).done(function (sad) {
-    console.log(sad)
+    sad_img = sad.data[3].images.fixed_height.url
+    sad_img2 = sad.data[11].images.fixed_height.url
 })
 
 var second = 30
+var alert = $(".win-loose")
+var panel = $(".btn-holder")
 
 var game = {
     question: suallar,
     times: second,
     correct: 0,
-    incoorect: 0,
+    incorrect: 0,
     questionnumber: 0,
 
     timer: function () {
-        $(".time").empty()
-        game.times--
-        $(".time").append($("<h2>" + game.times + "</h2>"))
-        if (game.times === 0) {
-            clearInterval(interval)
-            alert("Vaxt bitdi")
-            $(".win-loose").append($("<h2>" + "VAXT BITDI :(" + "</h2>"))
-            console.log (game.question[instance].dogrucavab)
-            $(".win-loose").append("<h2>" + "Doğru cavab:  " + game.question[instance].dogrucavab + "</h2>")
-            if (instance === game.question.length - 1) {
-                   alert ("suallar bitdi")
-                setTimeout(function () {
+        instance = this;
+        interval = setInterval(function () {
+            $(".time").empty()
+            game.times--
+            $(".time").append($("<h2>" + game.times + "</h2>"))
+            if (game.times === 0) {
+                clearInterval(interval)
+                game.times = 30
+                alert.append($("<h2>" + "VAXT BITDI :(" + "</h2>"))
+                panel.empty()
+                $(".gif-holder img").attr("src", sad_img2)
+                alert.append("<h2>" + "OOPS! Doğru cavab:  " + suallar[instance.questionnumber].dogrucavab + "</h2>")
+                game.questionnumber++
+                if (instance.questionnumber < 19) {
+                    console.log("i:" + instance.questionnumber)
+                    setTimeout(function () {
+                        panel.empty()
+                        alert.empty()
+                        game.nextquestion()
+                    }, 3000)
+                } else {
+                    setTimeout(function () {
+                        panel.empty()
+                        alert.empty()
+                        game.result()
+                    }, 3000)
+                }
 
-                    clearInterval(interval)
-                    $(".win-loose").append("<h2>" + "Oyun bitdi! Nəticələrin:" + "</h2>");
-                    $(".time").append($("<h2>" + game.times + "</h2>"))
-
-                     alert("neticeler")
-                    $(".btn-holder").append("<h2>Doğrular: " + game.correct + "</h2>");
-                    $(".btn-holder").append("<h2>Yanlışlar: " + game.incorrect + "</h2>");
-                    $(".btn-holder").append("<h2>Cavabsızlar: " + (game.questions.length - (game.incorrect + game.correct)) + "</h2>");
-                    $(".btn-holder").append("<br><button id='new-button'>yenidən ?</button>");
-                }, 5000)
             }
-            else {
-                setTimeout(game.yenisual, 5000)
-            }
-        }
+        }, 100)
     },
-    
 
-    yenisual: function () {
-        for ( var j=0; j < suallar.length; j++ ) {
-        instance = j
-        console.log (instance)
-        game.times = second
-        $(".time").append($("<h2>" + game.times + "</h2>"))
-        setInterval(game.timer, 300);
-        console.log (game.question[j].sual)
+    nextquestion: function () {
+        this.timer();
+        $(".gif-holder img").attr("src", "")
         var sual = ($("<div>"))
         sual.addClass("sual")
-        sual.html("<h2>" + game.question[j].sual + "</h2>");
-        $(".win-loose").append(sual)
-
-        for (var i = 0; i < game.question[j].cavab.length; i++) {
+        sual.html("<h2>" + suallar[this.questionnumber].sual + "</h2>")
+        panel.append(sual)
+        for (let i = 0; i < suallar[this.questionnumber].cavab.length; i++) {
             var answer = $("<button>")
             answer.addClass("btn-light")
             answer.addClass("my-btn")
-            console.log(game.question[j].cavab[i])
-            sual.html("<h2>" + game.question[j].cavab[i] + "</h2>")
-            $(".btn-holder").append(sual)
+            answer.html(suallar[this.questionnumber].cavab[i])
+            if (suallar[this.questionnumber].cavab[i] === suallar[this.questionnumber].dogrucavab) {
+                answer.addClass("dogru")
+            }
+            panel.append(answer)
         }
-    }
-},
 
-   check: function(e) {
-        console.log(e.html)
-        if (e.html === question[instance].dogrucavab) {
-            $(".win-loose").append($("<h2>" + "YEAP!" + "</h2>"))
-            alert("yeap")
-            game.correct ++
+        $(".my-btn").on("click", function (e) {
+            console.log("klik")
+            game.check(e)
+        })
+
+    },
+    check: function (e) {
+        console.log("check")
+        clearInterval(interval)
+        game.times = 30
+        if ($(e.target).hasClass("dogru")) {
+            game.correct++
+            panel.empty()
+            alert.append("<h2>" + "CAVAB DOĞRUDUR :)" + "</h2>")
+            $(".gif-holder img").attr("src", happy_img)
         } else {
-            $(".win-loose").append($("<h2>" + "OOPS!" + "</h2>"))
-            alert("oops")
-            game. incorrect ++
+            game.incorrect++
+            panel.empty()
+            alert.append("<h2>" + "OOPS! Doğru cavab:  " + suallar[this.questionnumber].dogrucavab + "</h2>")
+            $(".gif-holder img").attr("src", sad_img)
         }
+        game.questionnumber++
+        if (instance.questionnumber < 19) {
+            console.log("i:" + instance.questionnumber)
+            setTimeout(function () {
+                panel.empty()
+                alert.empty()
+                game.nextquestion()
+            }, 3000)
+        } else {
+            setTimeout(function () {
+                panel.empty()
+                alert.empty()
+                game.result()
+            }, 3000)
+        }
+    },
+    result: function () {
+        clearInterval(interval)
+        panel.empty()
+        $(".gif-holder img").attr("src", "")
+        panel.append("<h2>Doğrular: " + this.correct + "</h2>")
+        panel.append("<h2>Yanlışlar: " + this.incorrect + "</h2>")
+        panel.append("<h2>Cavabsızlar: " + (this.questions.length - (this.incorrect + this.correct)) + "</h2>")
     }
-} 
 
-interval = setInterval(game.timer, 300)
-game.yenisual()
+}
+
+game.nextquestion()

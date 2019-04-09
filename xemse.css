@@ -50,3 +50,10 @@ h2 {
     border:2px solid rgb(205, 209, 212);
     border-radius:10px;
 }
+.gif-holder {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.gif-holder img {
+    width: 30%;
+}
