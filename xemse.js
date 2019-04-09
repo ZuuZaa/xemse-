@@ -160,7 +160,7 @@ var game = {
                 }
 
             }
-        }, 100)
+        }, 1000)
     },
 
     nextquestion: function () {
